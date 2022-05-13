@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ToDo List</string>
+
+    <string name="task_name">Task Name</string>
+    <string name="initial_value">Initial Value</string>
+    <string name="final_value">Final Value</string>
+</resources>
