@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
 
             adapter.setOnClickListener(object : ItemAdapter.OnClickListener{
                 override fun onClick(position: Int, model: todoEntity) {
-                    Toast.makeText(this@MainActivity, "${model.task_name} + $position", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(this@MainActivity, "${model.task_name} + $position", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this@MainActivity, EditTaskActivity::class.java)
                     intent.putExtra("position",position)
                     startActivity(intent)
