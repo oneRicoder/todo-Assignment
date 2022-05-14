@@ -21,6 +21,7 @@ class AddTaskActivity : AppCompatActivity() {
         binding?.btnSaveTask?.setOnClickListener {
             formValidation()
         }
+
     }
 
     private fun formValidation(){
@@ -42,6 +43,8 @@ class AddTaskActivity : AppCompatActivity() {
         val finalValue:Int = Integer.parseInt(binding?.etFinalValue?.text.toString())
         lifecycleScope.launch {
             todoDao.insert(todoEntity(task_name = task_name, initial_value = initialValue, final_value = finalValue))
+            Toast.makeText(this@AddTaskActivity, "Task Added Successfully!", Toast.LENGTH_SHORT).show()
+            finish()
         }
     }
 

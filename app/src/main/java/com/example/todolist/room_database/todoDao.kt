@@ -16,8 +16,8 @@ interface todoDao {
     suspend fun delete(todoEntity: todoEntity)
 
     @Query("SELECT * FROM `todo-table`")
-    fun fetchAllTodo(): LiveData<List<todoEntity>>
+    fun fetchAllTodo(): Flow<List<todoEntity>>
 
     @Query("SELECT * FROM `todo-table` where uid=:id")
-    fun fetchById(id:Int): LiveData<List<todoEntity>>
+    fun fetchById(id:Int): Flow<todoEntity>
 }
