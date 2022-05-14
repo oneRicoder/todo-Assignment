@@ -62,5 +62,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     //db inspector
-    //debugImplementation "com.infinum.dbinspector:dbinspector:5.4.4"
+    debugImplementation "com.infinum.dbinspector:dbinspector:5.4.4"
 }
