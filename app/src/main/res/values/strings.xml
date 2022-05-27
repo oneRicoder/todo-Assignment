@@ -4,4 +4,8 @@
     <string name="task_name">Task Name</string>
     <string name="initial_value">Initial Value</string>
     <string name="final_value">Final Value</string>
+
+    <string name="content_description">To-do lists offer a way to increase productivity, stopping you
+        from forgetting things, helps prioritise tasks, manage tasks effectively, use time wisely and
+        improve time management as well as workflow.</string>
 </resources>

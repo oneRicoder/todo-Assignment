@@ -1,10 +1,11 @@
-package com.example.todolist
+package com.example.todolist.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
+import com.example.todolist.R
 import com.example.todolist.databinding.ActivityEditTaskBinding
 import com.example.todolist.room_database.todoApp
 import com.example.todolist.room_database.todoEntity

@@ -1,19 +1,17 @@
-package com.example.todolist
+package com.example.todolist.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.todolist.R
 import com.example.todolist.databinding.ActivityMainBinding
 import com.example.todolist.recyclerView.ItemAdapter
 import com.example.todolist.room_database.todoApp
-import com.example.todolist.room_database.todoDao
 import com.example.todolist.room_database.todoEntity
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
