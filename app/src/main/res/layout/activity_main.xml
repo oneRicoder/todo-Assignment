@@ -28,30 +28,38 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="?attr/actionBarSize"
+        >
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar_main_activity">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_main_activity">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView_mainActivity"
             android:layout_width="match_parent"
-            android:layout_marginBottom="50dp"
             android:layout_height="wrap_content"
-            android:visibility="gone"
-            />
+            android:layout_marginBottom="50dp"
+            android:visibility="gone" />
+
         <TextView
             android:id="@+id/no_task_available"
-            android:layout_marginTop="100dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="No Task Available"
-            android:visibility="visible"
-            android:textSize="20sp"
             android:layout_gravity="center"
-            />
+            android:layout_marginTop="100dp"
+            android:text="No Task Available"
+            android:textSize="20sp"
+            android:visibility="visible" />
     </LinearLayout>
 
 
@@ -65,5 +73,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

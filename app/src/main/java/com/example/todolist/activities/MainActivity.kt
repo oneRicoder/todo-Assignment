@@ -23,8 +23,10 @@ class MainActivity : AppCompatActivity() {
 
         setupActionBar()
         binding?.addTaskBtn?.setOnClickListener {
-            val intent = Intent(this, AddTaskActivity::class.java)
-            startActivity(intent)
+//            val intent = Intent(this, AddTaskActivity::class.java)
+//            startActivity(intent)
+
+            testfuction(homeFragment())
         }
         val todoDao = (application as todoApp).db.todoDao()
         lifecycleScope.launch {
@@ -32,6 +34,13 @@ class MainActivity : AppCompatActivity() {
                 populateTodoEntityToUi(ArrayList(it))
             }
         }
+    }
+
+    private fun testfuction(fragment: homeFragment) {
+        val fragmentLayout = supportFragmentManager
+        val fragmentTransation = fragmentLayout.beginTransaction()
+        fragmentTransation.replace(R.id.container, fragment)
+        fragmentTransation.commit()
     }
 
     fun populateTodoEntityToUi(list: ArrayList<todoEntity>){

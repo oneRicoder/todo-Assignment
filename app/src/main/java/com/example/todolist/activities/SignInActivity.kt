@@ -7,7 +7,6 @@ import android.text.TextUtils
 import android.widget.Toast
 import com.example.todolist.R
 import com.example.todolist.databinding.ActivitySignInBinding
-import kotlinx.android.synthetic.main.activity_sign_in.*
 
 class SignInActivity : AppCompatActivity() {
     var binding: ActivitySignInBinding? = null
@@ -42,12 +41,12 @@ class SignInActivity : AppCompatActivity() {
         }
     }
     private fun setUpActionBar(){
-        setSupportActionBar(toolbar_sign_in_activity)
+        setSupportActionBar(binding?.toolbarSignInActivity)
         var actionBar = supportActionBar
         if (actionBar != null){
             actionBar.setDisplayHomeAsUpEnabled(true)
             actionBar.setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_ios_24)
         }
-        toolbar_sign_in_activity.setNavigationOnClickListener { onBackPressed() }
+        binding?.toolbarSignInActivity?.setNavigationOnClickListener { onBackPressed() }
     }
 }

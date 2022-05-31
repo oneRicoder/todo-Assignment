@@ -7,7 +7,6 @@ import android.text.TextUtils
 import android.widget.Toast
 import com.example.todolist.R
 import com.example.todolist.databinding.ActivitySignUpBinding
-import kotlinx.android.synthetic.main.activity_sign_up.*
 
 class SignUpActivity : AppCompatActivity() {
     var binding: ActivitySignUpBinding? = null
@@ -47,13 +46,13 @@ class SignUpActivity : AppCompatActivity() {
         }
     }
     private fun setSupportActionBar(){
-        setSupportActionBar(toolbar_sign_up_activity)
+        setSupportActionBar(binding?.toolbarSignUpActivity)
         val actionBar = supportActionBar
         if (actionBar != null){
             actionBar.setDisplayHomeAsUpEnabled(true)
             actionBar.setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_ios_24)
         }
-        toolbar_sign_up_activity.setNavigationOnClickListener {
+        binding?.toolbarSignUpActivity?.setNavigationOnClickListener {
             onBackPressed()
         }
     }
