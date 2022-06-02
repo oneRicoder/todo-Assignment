@@ -22,11 +22,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding?.root)
 
         setupActionBar()
+        navigationThroughActivities()
         binding?.addTaskBtn?.setOnClickListener {
-//            val intent = Intent(this, AddTaskActivity::class.java)
-//            startActivity(intent)
-
-            testfuction(homeFragment())
+            val intent = Intent(this, AddTaskActivity::class.java)
+            startActivity(intent)
         }
         val todoDao = (application as todoApp).db.todoDao()
         lifecycleScope.launch {
@@ -35,14 +34,28 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+    private fun navigationThroughActivities(){
+        binding?.bottomNavigation?.setOnItemSelectedListener {
+            when(it.itemId){
+                R.id.home -> {
 
-    private fun testfuction(fragment: homeFragment) {
-        val fragmentLayout = supportFragmentManager
-        val fragmentTransation = fragmentLayout.beginTransaction()
-        fragmentTransation.replace(R.id.container, fragment)
-        fragmentTransation.commit()
+                }
+                R.id.graph -> {
+                    startActivity(Intent(this, GraphActivity::class.java))
+                    overridePendingTransition(0,0)
+                }
+                R.id.goal -> {
+                    startActivity(Intent(this, GoalActivity::class.java))
+                    overridePendingTransition(0,0,)
+                }
+                R.id.gtask -> {
+                    startActivity(Intent(this, GtaskActivity::class.java))
+                    overridePendingTransition(0,0)
+                }
+            }
+            true
+        }
     }
-
     fun populateTodoEntityToUi(list: ArrayList<todoEntity>){
         if (list.size > 0){
             recyclerView_mainActivity.visibility = View.VISIBLE

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/icon_home"
+        />
+    <item android:id="@+id/graph"
+        android:title="Graph"
+        android:icon="@drawable/icon_graph"/>
+    <item android:id="@+id/goal"
+        android:title="Goal"
+        android:icon="@drawable/icon_goal"/>
+    <item android:id="@+id/gtask"
+        android:title="G. Task"
+        android:icon="@drawable/icon_gtask"/>
+</menu>
