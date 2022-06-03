@@ -25,6 +25,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         android:background="#2a9d8f"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
         app:menu="@menu/menu"
         />
 

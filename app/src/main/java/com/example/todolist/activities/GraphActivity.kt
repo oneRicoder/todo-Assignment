@@ -12,6 +12,7 @@ class GraphActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityGraphBinding.inflate(layoutInflater)
         setContentView(binding?.root)
+        binding?.bottomNavigation?.selectedItemId = R.id.graph
 
         navigationThroughActivities()
     }

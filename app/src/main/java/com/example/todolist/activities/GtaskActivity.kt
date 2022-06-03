@@ -12,8 +12,18 @@ class GtaskActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityGtaskBinding.inflate(layoutInflater)
         setContentView(binding?.root)
-
+        binding?.bottomNavigation?.selectedItemId = R.id.gtask
         navigationThroughActivities()
+        setupActionBar()
+    }
+    private fun setupActionBar() {
+        setSupportActionBar(binding?.toolbarGtaskActivity)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.back_indicator)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+        binding?.toolbarGtaskActivity?.setNavigationOnClickListener {
+            onBackPressed()
+        }
     }
     private fun navigationThroughActivities(){
         binding?.bottomNavigation?.setOnItemSelectedListener {

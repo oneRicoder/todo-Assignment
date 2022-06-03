@@ -12,6 +12,7 @@ class GoalActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityGoalBinding.inflate(layoutInflater)
         setContentView(binding?.root)
+        binding?.bottomNavigation?.selectedItemId = R.id.goal
 
         navigationThroughActivities()
     }

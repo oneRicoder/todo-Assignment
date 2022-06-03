@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding?.root)
 
         setupActionBar()
+        binding?.bottomNavigation?.selectedItemId = R.id.home
         navigationThroughActivities()
         binding?.addTaskBtn?.setOnClickListener {
             val intent = Intent(this, AddTaskActivity::class.java)
@@ -46,7 +47,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.goal -> {
                     startActivity(Intent(this, GoalActivity::class.java))
-                    overridePendingTransition(0,0,)
+                    overridePendingTransition(0,0)
                 }
                 R.id.gtask -> {
                     startActivity(Intent(this, GtaskActivity::class.java))
