@@ -8,10 +8,12 @@
         <entry key="app/src/main/res/drawable/button_shape_rounded.xml" value="0.2225" />
         <entry key="app/src/main/res/drawable/circular_background.xml" value="0.2225" />
         <entry key="app/src/main/res/drawable/custom_progress_bg.xml" value="0.2225" />
+        <entry key="app/src/main/res/drawable/edit_text_backgound.xml" value="0.2225" />
         <entry key="app/src/main/res/drawable/item_background.xml" value="0.2225" />
         <entry key="app/src/main/res/drawable/save_indicator.xml" value="0.2225" />
         <entry key="app/src/main/res/drawable/selector.xml" value="0.2225" />
         <entry key="app/src/main/res/drawable/white_border_shape_button_rounded.xml" value="0.2225" />
+        <entry key="app/src/main/res/layout/activity_add_gtask.xml" value="0.37447916666666664" />
         <entry key="app/src/main/res/layout/activity_add_task.xml" value="0.36354166666666665" />
         <entry key="app/src/main/res/layout/activity_container.xml" value="0.37447916666666664" />
         <entry key="app/src/main/res/layout/activity_edit_task.xml" value="0.36354166666666665" />

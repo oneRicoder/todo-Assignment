@@ -15,6 +15,9 @@ class GtaskActivity : AppCompatActivity() {
         binding?.bottomNavigation?.selectedItemId = R.id.gtask
         navigationThroughActivities()
         setupActionBar()
+        binding?.addGtaskBtn?.setOnClickListener {
+            startActivity(Intent(this, AddGtaskActivity::class.java))
+        }
     }
     private fun setupActionBar() {
         setSupportActionBar(binding?.toolbarGtaskActivity)
