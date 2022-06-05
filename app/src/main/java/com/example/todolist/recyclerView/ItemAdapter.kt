@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.item_row.view.*
 class ItemAdapter(val context: Context, val list: ArrayList<todoEntity>): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     inner class MyViewHolder(view: View): RecyclerView.ViewHolder(view)
-    private var onClickListener: OnClickListener? = null
+    private var onClickListener: OnClickListener? = null //just for check
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return MyViewHolder(LayoutInflater.from(context).inflate(R.layout.item_row, parent, false))
