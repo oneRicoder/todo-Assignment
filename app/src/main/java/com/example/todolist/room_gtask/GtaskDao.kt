@@ -16,7 +16,7 @@ interface GtaskDao {
     suspend fun delete(GtaskEntity: GtaskEntity)
 
     @Query("SELECT * FROM `gtask_table`")
-    fun fetchAllTodo(): Flow<List<GtaskEntity>>
+    fun fetchAll(): Flow<List<GtaskEntity>>
 
     @Query("SELECT * FROM `gtask_table` where uid=:id")
     fun fetchById(id:Int): Flow<GtaskEntity>

@@ -1,5 +1,6 @@
 package com.example.todolist.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -29,6 +30,7 @@ class AddGtaskActivity : AppCompatActivity() {
         }
         binding?.saveBtnGtaskActivity?.setOnClickListener {
             lifecycleScope.launch {
+                addItemToCategory()
                 saveDataToRoom(gtaskdao)
             }
         }
@@ -44,6 +46,7 @@ class AddGtaskActivity : AppCompatActivity() {
             lifecycleScope.launch {
                 gtaskDao.insert(GtaskEntity(task_name = task_name, category_list = CategoryItemsArraylist))
                 Toast.makeText(this@AddGtaskActivity, "Data Saved Successfully!", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this@AddGtaskActivity, GtaskActivity::class.java))
             }
         }
     }

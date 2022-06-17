@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ_gtask_taskList"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/gtask_list_background"
+        />
+    <TextView
+        android:id="@+id/rv_tv_item_row_gtask"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        android:fontFamily="@font/nunito_semibold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="hello"
+        android:textSize="16sp"/>
+</LinearLayout>

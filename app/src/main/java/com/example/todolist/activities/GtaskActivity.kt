@@ -3,8 +3,17 @@ package com.example.todolist.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.todolist.R
 import com.example.todolist.databinding.ActivityGtaskBinding
+import com.example.todolist.recyclerView.ItemAdapterGtask
+import com.example.todolist.room_database.todoApp
+import com.example.todolist.room_gtask.GtaskDao
+import com.example.todolist.room_gtask.GtaskEntity
+import kotlinx.coroutines.launch
 
 class GtaskActivity : AppCompatActivity() {
     private var binding: ActivityGtaskBinding? = null
@@ -18,7 +27,22 @@ class GtaskActivity : AppCompatActivity() {
         binding?.addGtaskBtn?.setOnClickListener {
             startActivity(Intent(this, AddGtaskActivity::class.java))
         }
+        val GtaskDao = (application as todoApp).Gtaskdb.GtaskDao()
+        lifecycleScope.launch {
+            GtaskDao.fetchAll().collect{
+                populateGtaskToUI(ArrayList(it))
+            }
+        }
     }
+
+    private fun populateGtaskToUI(GtaskList: ArrayList<GtaskEntity>) {
+        if (GtaskList.isNotEmpty()){
+            binding?.rvGtask?.layoutManager = StaggeredGridLayoutManager(2,LinearLayoutManager.VERTICAL)
+            val adapter = ItemAdapterGtask(this, GtaskList)
+            binding?.rvGtask?.adapter = adapter
+        }
+    }
+
     private fun setupActionBar() {
         setSupportActionBar(binding?.toolbarGtaskActivity)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)

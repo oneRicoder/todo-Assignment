@@ -41,6 +41,7 @@ android {
 }
 
 dependencies {
+    implementation 'com.google.code.gson:gson:2.9.0'
     def room_version = '2.4.2'
     def activityVersion = '1.4.0'
     def lifecycle_version = "2.4.0-beta01"
@@ -64,5 +65,6 @@ dependencies {
     //db inspector
     debugImplementation "com.infinum.dbinspector:dbinspector:5.4.4"
 
-    implementation 'com.google.android.material:material:1.0.0'
+    // Circular ImageView
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 }

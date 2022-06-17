@@ -7,6 +7,7 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 
 @Database(entities = [GtaskEntity::class], version = 1)
+@TypeConverters(CategoryListTypeConverter::class)
 abstract class GtaskDatabase: RoomDatabase() {
     abstract fun GtaskDao(): GtaskDao
 
